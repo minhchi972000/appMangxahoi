@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:id="@+id/messageLayout"
+    android:paddingStart="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/user"
+            app:civ_border_color="@null" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profileIv"
+            android:padding="12dp"
+            android:paddingStart="10dp"
+            android:text="name"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/messageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:paddingStart="30dp"
+                android:text="His message"
+                android:background="@drawable/bg_receiver"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/messageIv"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/timeTv"
+                android:layout_marginStart="30dp"
+                android:padding="15dp"
+                android:background="@drawable/bg_receiver"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_image_black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="05:50PM"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="delivered"
+        android:textAlignment="textEnd"
+        android:visibility="gone" />
+
+
+</LinearLayout>
